@@ -1,0 +1,66 @@
+cac laoi forn can co:
++form flosh
++ form main
++ form chuc nag
++ about
++ help
+
+
+
+
+CDEntity {
+	private String maCD;
+	private String tenCD;
+	private Date ngayPhatHanh;
+	private double gia;
+	private int soluong;
+	private String phienban;
+	private int phanMemEntity;
+	
+	
+	
+CT_HoaDon {
+	private int soluong;
+	private CDEntity cdEntity;
+	private HoaDon hoaDon;
+	
+HoaDon {
+	private Date ngaythanhlap;
+	private List<CT_HoaDon> ct_HoaDons = new ArrayList<>();
+	private KhachHang khachHang;
+	
+	
+KhachHang {
+	private String username;
+	private String pwd;
+	
+	
+	
+NhanVien {
+	private String username;
+	private String pwd;
+	
+	
+	
+PhanMemEntity {
+	private int id;
+	private String tenPM;
+	private List<CDEntity> CDEntitylist;
+	private String tacGiaEntity;
+	private String tinhNangPMEntity;
+	
+	
+	
+TacGiaEntity {
+	private String diachiTG;
+	private int id;
+	private String phoneTG;
+	private String tenTG;
+	private List<PhanMemEntity> phanMemEntitieList;
+	
+	
+	
+TinhNangPMEntity {
+	private int id;
+	private String tinhnang;
+	private List<PhanMemEntity> phanMemEntitieList;
